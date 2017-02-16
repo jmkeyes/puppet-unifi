@@ -1,6 +1,6 @@
 {
   "name": "jmkeyes-unifi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "jmkeyes",
   "summary": "Module for managing a Ubiquiti UniFi Controller.",
   "license": "Apache-2.0",
