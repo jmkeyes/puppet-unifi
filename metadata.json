@@ -1,0 +1,39 @@
+{
+  "name": "jmkeyes-unifi",
+  "version": "0.0.1",
+  "author": "jmkeyes",
+  "summary": "Module for managing a Ubiquiti UniFi Controller.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/jmkeyes/puppet-unifi",
+  "project_page": "https://github.com/jmkeyes/puppet-unifi",
+  "issues_url": "https://github.com/jmkeyes/puppet-unifi/issues",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.7.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7.0",
+        "8.0"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.6.0 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs/java_ks",
+      "version_requirement": ">= 1.4.1 <= 2.0.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": ">= 2.3.0 <= 3.0.0"
+    }
+  ]
+}
