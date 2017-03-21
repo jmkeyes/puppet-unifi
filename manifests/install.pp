@@ -10,6 +10,7 @@ class unifi::install {
       comment  => 'Ubiquiti UniFi Controller APT Repository',
       location => $::unifi::repo_location,
       release  => $::unifi::repo_release,
+      require  => Apt::Key['unifi'],
       repos    => 'ubiquiti',
       pin      => '200',
       include  => {
@@ -17,6 +18,8 @@ class unifi::install {
         deb => true,
       },
     }
+
+    Apt::Source['unifi'] -> Package[$::unifi::package_name]
   }
 
   if $::unifi::manage_package {
