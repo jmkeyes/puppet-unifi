@@ -28,7 +28,7 @@ class unifi (
   contain '::unifi::config'
   contain '::unifi::service'
 
-  Class['::unifi::install'] ->
-  Class['::unifi::config'] ~>
-  Class['::unifi::service']
+  Class['::unifi::install']
+  -> Class['::unifi::config']
+  ~> Class['::unifi::service']
 }
