@@ -12,6 +12,7 @@ define unifi::setting (
   }
 
   augeas { "${target}/${name}/${value}":
+    require => Package[$::unifi::package_name],
     changes => "${operation} ${name} ${value}",
     lens    => 'Properties.lns',
     incl    => $target,
