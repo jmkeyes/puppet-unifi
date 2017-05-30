@@ -15,15 +15,14 @@ class unifi (
   $repo_release      = 'stable',
   $ssl_certificate   = undef,
   $ssl_private_key   = undef,
+  $log_path          = '/var/log/unifi',
+  $run_path          = '/var/run/unifi',
+  $data_path         = '/var/lib/unifi',
 ) {
   # Fail fast if we're not using a new Puppet version.
   if versioncmp($::puppetversion, '3.7.0') < 0 {
     fail('This module requires the use of Puppet v3.7.0 or newer.')
   }
-
-  $base_path = '/usr/lib/unifi'
-  $data_path = "${base_path}/data"
-  $logs_path = "${base_path}/logs"
 
   contain '::unifi::install'
   contain '::unifi::config'
