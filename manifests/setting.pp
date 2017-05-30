@@ -4,7 +4,7 @@ define unifi::setting (
   $ensure = 'present',
   $value  = undef,
 ) {
-  $target = "${::unifi::data_directory}/system.properties"
+  $target = "${::unifi::data_path}/system.properties"
 
   $operation = $ensure ? {
     present => 'set',
