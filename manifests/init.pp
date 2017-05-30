@@ -10,6 +10,7 @@ class unifi (
   $service_enable    = true,
   $manage_repository = true,
   $repo_key_id       = '4A228B2D358A5094178285BE06E85760C0A52C50',
+  $repo_key_server   = 'keyserver.ubuntu.com',
   $repo_location     = 'http://www.ubnt.com/downloads/unifi/debian',
   $repo_release      = 'stable',
   $ssl_certificate   = undef,

@@ -3,7 +3,8 @@
 class unifi::install {
   if $::unifi::manage_repository {
     apt::key { 'unifi':
-      id => $::unifi::repo_key_id,
+      id     => $::unifi::repo_key_id,
+      server => $::unifi::repo_key_server,
     }
 
     apt::source { 'unifi':
